@@ -19,7 +19,7 @@ class ThirdRow: UIView {
     }()
     
     @objc func handleFour() {
-        print("4 Tap")
+        resultsLabel.appendNumberText(numberStr: "4")
     }
     
     let fiveBtn: UIButton = {
@@ -32,7 +32,7 @@ class ThirdRow: UIView {
     }()
     
     @objc func handleFive() {
-        print("5 Tap")
+        resultsLabel.appendNumberText(numberStr: "5")
     }
     
     let sixBtn: UIButton = {
@@ -45,7 +45,7 @@ class ThirdRow: UIView {
     }()
     
     @objc func handleSix() {
-        print("6 Tap")
+        resultsLabel.appendNumberText(numberStr: "6")
     }
     
     let minusBtn: UIButton = {
@@ -58,7 +58,21 @@ class ThirdRow: UIView {
     }()
     
     @objc func handleMinus() {
-        print("- tap")
+        guard let text = resultsLabel.text else { return }
+        operationFlag = true
+        if initialNumber != nil {
+            secondNumber = Double(text)!
+            initialNumber = initialNumber! - secondNumber!
+            
+            if floor(initialNumber!) == initialNumber! {
+                resultsLabel.text = "\(Int(initialNumber!))"
+            } else {
+                resultsLabel.text = "\(initialNumber!)"
+            }
+        } else {
+            initialNumber = Double(text)!
+            resultsLabel.text = "0"
+        }
     }
     
     

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B721F062044A59E00F5BA7F /* 123Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B721F052044A59E00F5BA7F /* 123Row.swift */; };
+		0B721F082044ACD300F5BA7F /* LastRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B721F072044ACD300F5BA7F /* LastRow.swift */; };
 		0BAC7A6620448DAC00C2103F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAC7A6520448DAC00C2103F /* AppDelegate.swift */; };
 		0BAC7A6820448DAC00C2103F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAC7A6720448DAC00C2103F /* ViewController.swift */; };
 		0BAC7A6B20448DAC00C2103F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BAC7A6920448DAC00C2103F /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		0B721F052044A59E00F5BA7F /* 123Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 123Row.swift; sourceTree = "<group>"; };
+		0B721F072044ACD300F5BA7F /* LastRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastRow.swift; sourceTree = "<group>"; };
 		0BAC7A6220448DAC00C2103F /* ScientificCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScientificCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BAC7A6520448DAC00C2103F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BAC7A6720448DAC00C2103F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				0BAC7A8720449EA700C2103F /* 789Row.swift */,
 				0BAC7A892044A44600C2103F /* 456Row.swift */,
 				0B721F052044A59E00F5BA7F /* 123Row.swift */,
+				0B721F072044ACD300F5BA7F /* LastRow.swift */,
 			);
 			path = NormalViews;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				0BAC7A7F2044987400C2103F /* LogView.swift in Sources */,
 				0BAC7A7920448FB500C2103F /* TrigView.swift in Sources */,
 				0BAC7A8820449EA700C2103F /* 789Row.swift in Sources */,
+				0B721F082044ACD300F5BA7F /* LastRow.swift in Sources */,
 				0BAC7A8620449DA000C2103F /* TopRowView.swift in Sources */,
 				0BAC7A8320449C3800C2103F /* ConstantsView.swift in Sources */,
 				0BAC7A7B2044940500C2103F /* Extensions.swift in Sources */,

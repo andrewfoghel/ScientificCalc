@@ -20,7 +20,9 @@ class TopRowView: UIView {
     }()
     
     @objc func handleClear() {
-        print("AC Tap")
+        initialNumber = nil
+        secondNumber = nil
+        resultsLabel.text = "0"
     }
     
     let posNegBtn: UIButton = {
@@ -33,7 +35,15 @@ class TopRowView: UIView {
     }()
     
     @objc func handlePosNeg() {
-        print("+/- Tap")
+        guard let text = resultsLabel.text else { return }
+        if let num = secondNumber {
+            secondNumber = -num
+        }
+        if resultsLabel.text?.first == "-" {
+            resultsLabel.text?.remove(at: resultsLabel.text!.startIndex)
+        } else {
+            resultsLabel.text?.insert("-", at: resultsLabel.text!.startIndex)
+        }
     }
     
     let modBtn: UIButton = {
@@ -46,7 +56,21 @@ class TopRowView: UIView {
     }()
     
     @objc func handleMod() {
-        print("% Tap")
+        guard let text = resultsLabel.text else { return }
+        operationFlag = true
+        if initialNumber != nil {
+            secondNumber = Double(text)!
+            initialNumber = initialNumber!.truncatingRemainder(dividingBy: secondNumber!)
+            
+            if floor(initialNumber!) == initialNumber! {
+                resultsLabel.text = "\(Int(initialNumber!))"
+            } else {
+                resultsLabel.text = "\(initialNumber!)"
+            }
+        } else {
+            initialNumber = Double(text)!
+            resultsLabel.text = "0"
+        }
     }
     
     let divideBtn: UIButton = {
@@ -59,7 +83,21 @@ class TopRowView: UIView {
     }()
     
     @objc func handleDivide() {
-        print("/ Tap")
+        guard let text = resultsLabel.text else { return }
+        operationFlag = true
+        if initialNumber != nil {
+            secondNumber = Double(text)!
+            initialNumber = initialNumber! / secondNumber!
+            
+            if floor(initialNumber!) == initialNumber! {
+                resultsLabel.text = "\(Int(initialNumber!))"
+            } else {
+                resultsLabel.text = "\(initialNumber!)"
+            }
+        } else {
+            initialNumber = Double(text)!
+            resultsLabel.text = "0"
+        }
     }
     
     

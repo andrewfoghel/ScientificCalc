@@ -39,3 +39,24 @@ extension UIView {
         
     }
 }
+
+
+extension UILabel {
+    func appendNumberText(numberStr: String) {
+        if self.text == "0" {
+            self.text = numberStr
+        } else if self.text == "0" && numberStr == "."{
+            self.text?.append(".")
+        } else if (self.text?.contains("."))! && numberStr == "." {
+            return
+        } else if operationFlag == true {
+            self.text = ""
+            self.text?.append(numberStr)
+            operationFlag = false
+        } else {
+            self.text?.append(numberStr)
+        }
+    }
+    
+}
+

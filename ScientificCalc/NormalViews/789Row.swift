@@ -19,7 +19,7 @@ class SecondRow: UIView {
     }()
     
     @objc func handleSeven() {
-        print("7 Tap")
+        resultsLabel.appendNumberText(numberStr: "7")
     }
     
     let eightBtn: UIButton = {
@@ -32,7 +32,7 @@ class SecondRow: UIView {
     }()
     
     @objc func handleEight() {
-        print("8 Tap")
+        resultsLabel.appendNumberText(numberStr: "8")
     }
     
     let nineBtn: UIButton = {
@@ -45,7 +45,7 @@ class SecondRow: UIView {
     }()
     
     @objc func handleNine() {
-        print("9 Tap")
+        resultsLabel.appendNumberText(numberStr: "9")
     }
     
     let timesBtn: UIButton = {
@@ -58,7 +58,21 @@ class SecondRow: UIView {
     }()
     
     @objc func handleTimes() {
-        print("times tap")
+        guard let text = resultsLabel.text else { return }
+        operationFlag = true
+        if initialNumber != nil {
+            secondNumber = Double(text)!
+            initialNumber = initialNumber! * secondNumber!
+            
+            if floor(initialNumber!) == initialNumber! {
+                resultsLabel.text = "\(Int(initialNumber!))"
+            } else {
+                resultsLabel.text = "\(initialNumber!)"
+            }
+        } else {
+            initialNumber = Double(text)!
+            resultsLabel.text = "0"
+        }
     }
     
     
@@ -90,3 +104,5 @@ class SecondRow: UIView {
         stackView.anchor(top: topAnchor, left: leftAnchor, right: rightAnchor, bottom: bottomAnchor, paddingTop: 8, paddingLeft: 10, paddingRight: 10, paddingBottom: 0, width: 0, height: 0)
     }
 }
+
+
