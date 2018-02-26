@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B721F062044A59E00F5BA7F /* 123Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B721F052044A59E00F5BA7F /* 123Row.swift */; };
 		0BAC7A6620448DAC00C2103F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAC7A6520448DAC00C2103F /* AppDelegate.swift */; };
 		0BAC7A6820448DAC00C2103F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAC7A6720448DAC00C2103F /* ViewController.swift */; };
 		0BAC7A6B20448DAC00C2103F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BAC7A6920448DAC00C2103F /* Main.storyboard */; };
 		0BAC7A6D20448DAC00C2103F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BAC7A6C20448DAC00C2103F /* Assets.xcassets */; };
 		0BAC7A7020448DAC00C2103F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BAC7A6E20448DAC00C2103F /* LaunchScreen.storyboard */; };
+		0BAC7A7920448FB500C2103F /* TrigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAC7A7820448FB500C2103F /* TrigView.swift */; };
+		0BAC7A7B2044940500C2103F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAC7A7A2044940500C2103F /* Extensions.swift */; };
+		0BAC7A7F2044987400C2103F /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAC7A7E2044987400C2103F /* LogView.swift */; };
+		0BAC7A8120449AA900C2103F /* ExponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAC7A8020449AA900C2103F /* ExponentView.swift */; };
+		0BAC7A8320449C3800C2103F /* ConstantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAC7A8220449C3800C2103F /* ConstantsView.swift */; };
+		0BAC7A8620449DA000C2103F /* TopRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAC7A8520449DA000C2103F /* TopRowView.swift */; };
+		0BAC7A8820449EA700C2103F /* 789Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAC7A8720449EA700C2103F /* 789Row.swift */; };
+		0BAC7A8A2044A44600C2103F /* 456Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAC7A892044A44600C2103F /* 456Row.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B721F052044A59E00F5BA7F /* 123Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 123Row.swift; sourceTree = "<group>"; };
 		0BAC7A6220448DAC00C2103F /* ScientificCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScientificCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BAC7A6520448DAC00C2103F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BAC7A6720448DAC00C2103F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +32,14 @@
 		0BAC7A6C20448DAC00C2103F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BAC7A6F20448DAC00C2103F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BAC7A7120448DAC00C2103F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BAC7A7820448FB500C2103F /* TrigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrigView.swift; sourceTree = "<group>"; };
+		0BAC7A7A2044940500C2103F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0BAC7A7E2044987400C2103F /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
+		0BAC7A8020449AA900C2103F /* ExponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExponentView.swift; sourceTree = "<group>"; };
+		0BAC7A8220449C3800C2103F /* ConstantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsView.swift; sourceTree = "<group>"; };
+		0BAC7A8520449DA000C2103F /* TopRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRowView.swift; sourceTree = "<group>"; };
+		0BAC7A8720449EA700C2103F /* 789Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 789Row.swift; sourceTree = "<group>"; };
+		0BAC7A892044A44600C2103F /* 456Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 456Row.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +72,39 @@
 		0BAC7A6420448DAC00C2103F /* ScientificCalc */ = {
 			isa = PBXGroup;
 			children = (
+				0BAC7A8420449D8400C2103F /* NormalViews */,
+				0BAC7A7720448DCC00C2103F /* ScientificViews */,
 				0BAC7A6520448DAC00C2103F /* AppDelegate.swift */,
 				0BAC7A6720448DAC00C2103F /* ViewController.swift */,
 				0BAC7A6920448DAC00C2103F /* Main.storyboard */,
 				0BAC7A6C20448DAC00C2103F /* Assets.xcassets */,
 				0BAC7A6E20448DAC00C2103F /* LaunchScreen.storyboard */,
 				0BAC7A7120448DAC00C2103F /* Info.plist */,
+				0BAC7A7A2044940500C2103F /* Extensions.swift */,
 			);
 			path = ScientificCalc;
+			sourceTree = "<group>";
+		};
+		0BAC7A7720448DCC00C2103F /* ScientificViews */ = {
+			isa = PBXGroup;
+			children = (
+				0BAC7A7820448FB500C2103F /* TrigView.swift */,
+				0BAC7A7E2044987400C2103F /* LogView.swift */,
+				0BAC7A8020449AA900C2103F /* ExponentView.swift */,
+				0BAC7A8220449C3800C2103F /* ConstantsView.swift */,
+			);
+			path = ScientificViews;
+			sourceTree = "<group>";
+		};
+		0BAC7A8420449D8400C2103F /* NormalViews */ = {
+			isa = PBXGroup;
+			children = (
+				0BAC7A8520449DA000C2103F /* TopRowView.swift */,
+				0BAC7A8720449EA700C2103F /* 789Row.swift */,
+				0BAC7A892044A44600C2103F /* 456Row.swift */,
+				0B721F052044A59E00F5BA7F /* 123Row.swift */,
+			);
+			path = NormalViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +180,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BAC7A6820448DAC00C2103F /* ViewController.swift in Sources */,
+				0BAC7A8120449AA900C2103F /* ExponentView.swift in Sources */,
+				0B721F062044A59E00F5BA7F /* 123Row.swift in Sources */,
+				0BAC7A8A2044A44600C2103F /* 456Row.swift in Sources */,
 				0BAC7A6620448DAC00C2103F /* AppDelegate.swift in Sources */,
+				0BAC7A7F2044987400C2103F /* LogView.swift in Sources */,
+				0BAC7A7920448FB500C2103F /* TrigView.swift in Sources */,
+				0BAC7A8820449EA700C2103F /* 789Row.swift in Sources */,
+				0BAC7A8620449DA000C2103F /* TopRowView.swift in Sources */,
+				0BAC7A8320449C3800C2103F /* ConstantsView.swift in Sources */,
+				0BAC7A7B2044940500C2103F /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,13 +327,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UTM6LELLUH;
+				DEVELOPMENT_TEAM = 3G982QU8UL;
 				INFOPLIST_FILE = ScientificCalc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = andrewfoghel.ScientificCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -290,13 +342,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UTM6LELLUH;
+				DEVELOPMENT_TEAM = 3G982QU8UL;
 				INFOPLIST_FILE = ScientificCalc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = andrewfoghel.ScientificCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
