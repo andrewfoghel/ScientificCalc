@@ -46,15 +46,16 @@ class ConstantsView: UIView {
     }()
     
     @objc func handleSquare() {
-        guard let text = resultsLabel.text else { return }
-        let num = Double(text)!
-        initialNumber = pow(num, 2)
-        
-        if floor(initialNumber!) == initialNumber! {
-            resultsLabel.text = "\(Int(initialNumber!))"
-        } else {
-            resultsLabel.text = "\(initialNumber!)"
-        }
+        resultsLabel.appendNumberText(numberStr: "^2")
+//        guard let text = resultsLabel.text else { return }
+//        let num = Double(text)!
+//        initialNumber = pow(num, 2)
+//
+//        if floor(initialNumber!) == initialNumber! {
+//            resultsLabel.text = "\(Int(initialNumber!))"
+//        } else {
+//            resultsLabel.text = "\(initialNumber!)"
+//        }
     }
     
     let piBtn: UIButton = {
@@ -67,7 +68,7 @@ class ConstantsView: UIView {
     }()
     
     @objc func handlePi() {
-        resultsLabel.appendNumberText(numberStr: "\(Double.pi)")
+        resultsLabel.appendNumberText(numberStr: "π")
     }
     
     

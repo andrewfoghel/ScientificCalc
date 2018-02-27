@@ -20,7 +20,7 @@ class LogView: UIView {
     }()
     
     @objc func handleE() {
-        print("e Tap")
+        resultsLabel.appendNumberText(numberStr: "e")
     }
     
     let naturlLogBtn: UIButton = {
@@ -33,7 +33,7 @@ class LogView: UIView {
     }()
     
     @objc func handleLn() {
-        print("ln Tap")
+        resultsLabel.appendNumberText(numberStr: "ln(")
     }
     
     let logBtn: UIButton = {
@@ -46,7 +46,7 @@ class LogView: UIView {
     }()
     
     @objc func handleLog() {
-        print("log Tap")
+        resultsLabel.appendNumberText(numberStr: "log(")
     }
     
     let inverseBtn: UIButton = {

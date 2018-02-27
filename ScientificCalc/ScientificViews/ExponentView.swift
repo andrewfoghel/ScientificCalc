@@ -21,30 +21,33 @@ class ExponentView: UIView {
     
     @objc func handleFactorial() {
         guard let text = resultsLabel.text else { return }
-        let num = Double(text)!
-        initialNumber = findFactorial(decimalValue: num)
-        resultsLabel.text = "\(initialNumber!)"
-    }
-    
-    fileprivate func findFactorial(decimalValue: Double) -> Double {
-        
-        var inputDecimalValue = decimalValue
-        var factorialValue = 1.0
-        
-        if inputDecimalValue.truncatingRemainder(dividingBy: 2.0) == 0 {
-            
-            while inputDecimalValue > 1 {
-                
-                factorialValue = factorialValue * inputDecimalValue
-                inputDecimalValue = inputDecimalValue - 1
-            }
-            
-            return factorialValue
-            
+        let num = NSExpression(format:"FUNCTION(\(text), 'factorial')").expressionValue(with: nil, context: nil) as? Double
+        if num == nil {
+            resultsLabel.text = "Error"
         } else {
-            return tgamma(inputDecimalValue + 1.0)
+            resultsLabel.text = "\(num!)"
         }
     }
+    
+//    fileprivate func findFactorial(decimalValue: Double) -> Double {
+//
+//        var inputDecimalValue = decimalValue
+//        var factorialValue = 1.0
+//
+//        if inputDecimalValue.truncatingRemainder(dividingBy: 2.0) == 0 {
+//
+//            while inputDecimalValue > 1 {
+//
+//                factorialValue = factorialValue * inputDecimalValue
+//                inputDecimalValue = inputDecimalValue - 1
+//            }
+//
+//            return factorialValue
+//
+//        } else {
+//            return tgamma(inputDecimalValue + 1.0)
+//        }
+//    }
     
     let powerBtn: UIButton = {
         let btn = UIButton(type: .system)
@@ -56,7 +59,7 @@ class ExponentView: UIView {
     }()
     
     @objc func handlePower() {
-        print("x^y Tap")
+        resultsLabel.appendNumberText(numberStr: "^")
     }
     
     let sqrtBtn: UIButton = {
@@ -69,15 +72,16 @@ class ExponentView: UIView {
     }()
     
     @objc func handleSqrt() {
-        guard let text = resultsLabel.text else { return }
-        let num = Double(text)!
-        initialNumber = sqrt(num)
-        
-        if floor(initialNumber!) == initialNumber! {
-            resultsLabel.text = "\(Int(initialNumber!))"
-        } else {
-            resultsLabel.text = "\(initialNumber!)"
-        }
+        resultsLabel.appendNumberText(numberStr: "√(")
+//        guard let text = resultsLabel.text else { return }
+//        let num = Double(text)!
+//        initialNumber = sqrt(num)
+//
+//        if floor(initialNumber!) == initialNumber! {
+//            resultsLabel.text = "\(Int(initialNumber!))"
+//        } else {
+//            resultsLabel.text = "\(initialNumber!)"
+//        }
     }
     
     let nSqrtBtn: UIButton = {

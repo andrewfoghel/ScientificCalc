@@ -45,14 +45,25 @@ class LastRow: UIView {
     }()
     
     @objc func handleEqual() {
-        if secondNumber == nil {
-            guard let text = resultsLabel.text else { return }
-            secondNumber = Double(text)!
+        guard let text = resultsLabel.text else { return }
+        var parsedString = text.replacingOccurrences(of: "^", with: "**") //Handle power funcs
+        parsedString = text.replacingOccurrences(of: "e", with: " * 2.71828182846") //Handle natural exponent
+        parsedString = text.replacingOccurrences(of: "π", with: " * 3.14159265359") //Handle pi
+        parsedString = text.replacingOccurrences(of: "√", with: "sqrt") //Handle sqrt
+        let num = NSExpression(format: parsedString).expressionValue(with: nil, context: nil) as? Double
+        if num != nil {
+            resultsLabel.text = "\(num!)"
+        } else {
+            resultsLabel.text = "Error"
         }
-        if secondNumber != nil && initialNumber != nil {
-            initialNumber = initialNumber! + secondNumber!
-            resultsLabel.text = "\(initialNumber!)"
-        }
+//        if secondNumber == nil {
+//            guard let text = resultsLabel.text else { return }
+//            secondNumber = Double(text)!
+//        }
+//        if secondNumber != nil && initialNumber != nil {
+//            initialNumber = initialNumber! + secondNumber!
+//            resultsLabel.text = "\(initialNumber!)"
+//        }
     }
     
     override init(frame: CGRect) {

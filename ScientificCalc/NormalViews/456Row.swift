@@ -58,21 +58,22 @@ class ThirdRow: UIView {
     }()
     
     @objc func handleMinus() {
-        guard let text = resultsLabel.text else { return }
-        operationFlag = true
-        if initialNumber != nil {
-            secondNumber = Double(text)!
-            initialNumber = initialNumber! - secondNumber!
-            
-            if floor(initialNumber!) == initialNumber! {
-                resultsLabel.text = "\(Int(initialNumber!))"
-            } else {
-                resultsLabel.text = "\(initialNumber!)"
-            }
-        } else {
-            initialNumber = Double(text)!
-            resultsLabel.text = "0"
-        }
+        resultsLabel.appendNumberText(numberStr: " - ")
+//        guard let text = resultsLabel.text else { return }
+//        operationFlag = true
+//        if initialNumber != nil {
+//            secondNumber = Double(text)!
+//            initialNumber = initialNumber! - secondNumber!
+//
+//            if floor(initialNumber!) == initialNumber! {
+//                resultsLabel.text = "\(Int(initialNumber!))"
+//            } else {
+//                resultsLabel.text = "\(initialNumber!)"
+//            }
+//        } else {
+//            initialNumber = Double(text)!
+//            resultsLabel.text = "0"
+//        }
     }
     
     
