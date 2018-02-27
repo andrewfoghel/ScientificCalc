@@ -20,7 +20,22 @@ class TrigView: UIView {
     }()
     
     @objc func handleSin() {
-        print("Sin Tap")
+        guard let text = resultsLabel.text else { return }
+        var num = Double(text)!
+        if degreeFlag == true {
+            num = (num * Double.pi)/180
+            num = sin(num)
+            initialNumber = num
+        } else {
+            num = sin(num)
+            initialNumber = num
+        }
+        
+        if floor(initialNumber!) == initialNumber! {
+            resultsLabel.text = "\(Int(initialNumber!))"
+        } else {
+            resultsLabel.text = "\(initialNumber!)"
+        }
     }
     
     let cosBtn: UIButton = {
@@ -33,7 +48,22 @@ class TrigView: UIView {
     }()
     
     @objc func handleCos() {
-        print("Cos Tap")
+        guard let text = resultsLabel.text else { return }
+        var num = Double(text)!
+        if degreeFlag == true {
+            num = (num * Double.pi)/180
+            num = cos(num)
+            initialNumber = num
+        } else {
+            num = cos(num)
+            initialNumber = num
+        }
+        
+        if floor(initialNumber!) == initialNumber! {
+            resultsLabel.text = "\(Int(initialNumber!))"
+        } else {
+            resultsLabel.text = "\(initialNumber!)"
+        }
     }
     
     let tanBtn: UIButton = {
@@ -46,7 +76,22 @@ class TrigView: UIView {
     }()
     
     @objc func handleTan() {
-        print("Tan Tap")
+        guard let text = resultsLabel.text else { return }
+        var num = Double(text)!
+        if degreeFlag == true {
+            num = (num * Double.pi)/180
+            num = tan(num)
+            initialNumber = num
+        } else {
+            num = tan(num)
+            initialNumber = num
+        }
+        
+        if floor(initialNumber!) == initialNumber! {
+            resultsLabel.text = "\(Int(initialNumber!))"
+        } else {
+            resultsLabel.text = "\(initialNumber!)"
+        }
     }
     
     let secBtn: UIButton = {
@@ -59,7 +104,22 @@ class TrigView: UIView {
     }()
     
     @objc func handleSec() {
-        print("Sec Tap")
+        guard let text = resultsLabel.text else { return }
+        var num = Double(text)!
+        if degreeFlag == true {
+            num = (num * Double.pi)/180
+            num = 1/cos(num)
+            initialNumber = num
+        } else {
+            num = 1/cos(num)
+            initialNumber = num
+        }
+        
+        if floor(initialNumber!) == initialNumber! {
+            resultsLabel.text = "\(Int(initialNumber!))"
+        } else {
+            resultsLabel.text = "\(initialNumber!)"
+        }
     }
     
     

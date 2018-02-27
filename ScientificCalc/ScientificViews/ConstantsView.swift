@@ -20,7 +20,7 @@ class ConstantsView: UIView {
     }()
     
     @objc func handleLeftPar() {
-        print("( Tap")
+        resultsLabel.appendNumberText(numberStr: "(")
     }
     
     let rightParBtn: UIButton = {
@@ -33,7 +33,7 @@ class ConstantsView: UIView {
     }()
     
     @objc func handleRightPar() {
-        print(") Tap")
+        resultsLabel.appendNumberText(numberStr: ")")
     }
     
     let squareBtn: UIButton = {
@@ -46,7 +46,15 @@ class ConstantsView: UIView {
     }()
     
     @objc func handleSquare() {
-        print("x^2 Tap")
+        guard let text = resultsLabel.text else { return }
+        let num = Double(text)!
+        initialNumber = pow(num, 2)
+        
+        if floor(initialNumber!) == initialNumber! {
+            resultsLabel.text = "\(Int(initialNumber!))"
+        } else {
+            resultsLabel.text = "\(initialNumber!)"
+        }
     }
     
     let piBtn: UIButton = {
@@ -59,13 +67,12 @@ class ConstantsView: UIView {
     }()
     
     @objc func handlePi() {
-        print("pi Tap")
+        resultsLabel.appendNumberText(numberStr: "\(Double.pi)")
     }
     
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         addSubview(leftParBtn)
         leftParBtn.layer.cornerRadius = 10
         addSubview(rightParBtn)
@@ -75,7 +82,6 @@ class ConstantsView: UIView {
         addSubview(piBtn)
         piBtn.layer.cornerRadius = 10
         setupButtons()
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

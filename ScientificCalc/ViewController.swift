@@ -27,6 +27,7 @@ let resultsLabel: UILabel = {
 var initialNumber: Double?
 var secondNumber: Double?
 var operationFlag = false
+var degreeFlag = true
 
 class ViewController: UIViewController {
 
@@ -40,7 +41,7 @@ class ViewController: UIViewController {
     
     lazy var degRadControl: UISegmentedControl = {
         let sc = UISegmentedControl(items: ["Deg", "Rad"])
-        sc.selectedSegmentIndex = 1
+        sc.selectedSegmentIndex = 0
         sc.addTarget(self, action: #selector(handleDegRadChange), for: .valueChanged)
         sc.tintColor = customGray
         sc.layer.borderColor = customGray.cgColor
@@ -52,8 +53,10 @@ class ViewController: UIViewController {
     @objc fileprivate func handleDegRadChange() {
         if degRadControl.selectedSegmentIndex == 0 {
             print("Degrees")
+            degreeFlag = true
         } else {
             print("Radians")
+            degreeFlag = false
         }
     }
     

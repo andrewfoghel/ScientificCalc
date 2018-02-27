@@ -45,11 +45,15 @@ class LastRow: UIView {
     }()
     
     @objc func handleEqual() {
-        print("= Tap")
+        if secondNumber == nil {
+            guard let text = resultsLabel.text else { return }
+            secondNumber = Double(text)!
+        }
+        if secondNumber != nil && initialNumber != nil {
+            initialNumber = initialNumber! + secondNumber!
+            resultsLabel.text = "\(initialNumber!)"
+        }
     }
-    
-
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)

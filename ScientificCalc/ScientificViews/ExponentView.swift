@@ -20,7 +20,30 @@ class ExponentView: UIView {
     }()
     
     @objc func handleFactorial() {
-        print("x! Tap")
+        guard let text = resultsLabel.text else { return }
+        let num = Double(text)!
+        initialNumber = findFactorial(decimalValue: num)
+        resultsLabel.text = "\(initialNumber!)"
+    }
+    
+    fileprivate func findFactorial(decimalValue: Double) -> Double {
+        
+        var inputDecimalValue = decimalValue
+        var factorialValue = 1.0
+        
+        if inputDecimalValue.truncatingRemainder(dividingBy: 2.0) == 0 {
+            
+            while inputDecimalValue > 1 {
+                
+                factorialValue = factorialValue * inputDecimalValue
+                inputDecimalValue = inputDecimalValue - 1
+            }
+            
+            return factorialValue
+            
+        } else {
+            return tgamma(inputDecimalValue + 1.0)
+        }
     }
     
     let powerBtn: UIButton = {
@@ -46,7 +69,15 @@ class ExponentView: UIView {
     }()
     
     @objc func handleSqrt() {
-        print("sqrt Tap")
+        guard let text = resultsLabel.text else { return }
+        let num = Double(text)!
+        initialNumber = sqrt(num)
+        
+        if floor(initialNumber!) == initialNumber! {
+            resultsLabel.text = "\(Int(initialNumber!))"
+        } else {
+            resultsLabel.text = "\(initialNumber!)"
+        }
     }
     
     let nSqrtBtn: UIButton = {
